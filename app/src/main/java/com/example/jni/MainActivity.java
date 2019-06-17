@@ -86,12 +86,10 @@ public class MainActivity extends AppCompatActivity {
         Log.e(tag, "**********");
 
         Log.e(tag, "" + getIntegerObject(1));
-        /*
         Log.e(tag, "" + getIntegerObject(2));
         Log.e(tag, "" + anotherGetIntegerObject(1));
         Log.e(tag, "" + anotherGetIntegerObject(2));
         Log.e(tag, "" + getIntegerObject(3));
         Log.e(tag, "" + anotherGetIntegerObject(13));
-        */
     }
 }
