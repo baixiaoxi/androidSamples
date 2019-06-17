@@ -78,14 +78,20 @@ public class MainActivity extends AppCompatActivity {
 
         Log.e(tag, "**********");
 
-        sumAndAverage2();
+        Integer[] numbers2 = {11, 22, 32};
+        Double[] results2 = sumAndAverage2(numbers2);
+        Log.e(tag, "In Java, the sum is " + results2[0]);
+        Log.e(tag, "In Java, the average is " + results2[1]);
 
         Log.e(tag, "**********");
+
         Log.e(tag, "" + getIntegerObject(1));
+        /*
         Log.e(tag, "" + getIntegerObject(2));
         Log.e(tag, "" + anotherGetIntegerObject(1));
         Log.e(tag, "" + anotherGetIntegerObject(2));
         Log.e(tag, "" + getIntegerObject(3));
         Log.e(tag, "" + anotherGetIntegerObject(13));
+        */
     }
 }

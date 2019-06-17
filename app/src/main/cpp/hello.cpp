@@ -27,12 +27,12 @@ jobject getInteger(JNIEnv *env, jobject thisObj, jint number) {
     return newObj;
 }
 
-JNIEXPORT jobject JNICALL Java_TestJNIReference_getIntegerObject
+extern "C" JNIEXPORT jobject JNICALL Java_com_example_jni_MainActivity_getIntegerObject
         (JNIEnv *env, jobject thisObj, jint number) {
     return getInteger(env, thisObj, number);
 }
 
-JNIEXPORT jobject JNICALL Java_TestJNIReference_anotherGetIntegerObject
+extern "C" JNIEXPORT jobject JNICALL Java_com_example_jni_MainActivity_anotherGetIntegerObject
         (JNIEnv *env, jobject thisObj, jint number) {
     return getInteger(env, thisObj, number);
 }
@@ -40,7 +40,8 @@ JNIEXPORT jobject JNICALL Java_TestJNIReference_anotherGetIntegerObject
 extern "C" JNIEXPORT jobjectArray JNICALL
 Java_com_example_jni_MainActivity_sumAndAverage2(
         JNIEnv* env,
-        jobject thisObj
+        jobject thisObj,
+        jobjectArray inJNIArray
         ) {
     jclass classInteger = env->FindClass("java/lang/Integer");
     jmethodID midIntValue = env->GetMethodID(classInteger, "intValue", "()I");
